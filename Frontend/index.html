@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <div class="landing-page">
+        <div class="content-wrapper">
+            <h2>Welcome to Our Application</h2>
+            <div class="button-group">
+                <button id="loginButton" class="btn-landing">LOGIN</button>
+                <button id="signupButton" class="btn-landing">SIGN UP</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = 'login.html';
+        });
+
+        document.getElementById('signupButton').addEventListener('click', function() {
+            window.location.href = 'signup.html';
+        });
+    </script>
+</body>
+</html>

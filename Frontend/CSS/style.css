@@ -1,0 +1,56 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Landing Page Styles */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.landing-page {
+    background: #e0f7fa;
+    color: #00796b;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-landing {
+    background-color: #0044cc;
+    color: #fff;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.btn-landing:hover {
+    background-color: #00796b;
+    color: white;
+}

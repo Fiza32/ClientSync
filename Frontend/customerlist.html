@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/customerlist.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h2>All Customers</h2>
+      </div>
+      <!-- Buttons -->
+      <div class="button-group">
+        <!-- Add Customer Button -->
+        <a class="btn-add" href="#" onclick="redirectToAddCustomer()">Add Customer</a>
+
+        <!-- Dropdown Button -->
+        <div class="dropdown">
+          <button type="button" class="btn-dropdown">
+            Search By
+            <i
+              id="dropdownButton"
+              class="fas fa-chevron-down dropdown-icon"
+            ></i>
+          </button>
+
+          <ul class="dropdown-menu" id="searchFieldMenu">
+            <li>
+              <a class="dropdown-item" href="#" data-field="firstName"
+                >First Name</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" data-field="city">City</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" data-field="email">Email</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" data-field="phone">Phone</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Search Input and Button -->
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchValue"
+            class="search-input"
+            placeholder="Search"
+          />
+          <button type="button" class="search-button" id="searchButton">
+            <i class="fas fa-search search-icon"></i>
+          </button>
+        </div>
+
+        <!-- Sync Button -->
+        <button id="syncButton" class="btn-sync">Sync</button>
+        
+        <!-- Logout Button -->
+        <button id="logoutButton" class="btn-logout">Logout</button>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
+        <thead class="table-head">
+          <tr>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Street</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          
+        </tbody>
+      </table>
+
+      <!-- Pagination Controls -->
+      <div class="pagination">
+        <button class="pagination-button" id="prevPage">Previous</button>
+        <span class="page-numbers" id="pageNumbers"></span>
+        <button class="pagination-button" id="nextPage">Next</button>
+      </div>
+    </div>
+
+    <script src="/JS/customerlist.js"></script>
+  </body>
+</html>
