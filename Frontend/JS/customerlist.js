@@ -44,8 +44,8 @@ function redirectToAddCustomer() {
 document.addEventListener('DOMContentLoaded', function() {
     let pageNumber = 0;
     const pageSize = 5;
-    const sortBy = 'uuid';
-    const sortDirection = 'asc';
+    let sortBy = 'uuid';
+    let sortDirection = 'asc';
     const token = localStorage.getItem('jwtToken');
 
     function fetchCustomers() {
@@ -115,6 +115,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Handle field selection from dropdown
+    document.querySelectorAll('#searchFieldMenu .dropdown-item').forEach(item => {
+        item.addEventListener('click', function() {
+            sortBy = this.getAttribute('data-field');
+            fetchCustomers(); // Fetch with the selected field
+        });
+    });
+
+    // Event listeners for sorting buttons
+    document.getElementById('sortAscButton').addEventListener('click', function() {
+        sortDirection = 'asc';
+        fetchCustomers();
+    });
+
+    document.getElementById('sortDescButton').addEventListener('click', function() {
+        sortDirection = 'desc';
+        fetchCustomers();
+    });
+
     // Fetch initial data
     fetchCustomers();
 });
@@ -123,9 +142,6 @@ function editCustomer(uuid) {
     // Redirect to the edit page with the UUID as a URL parameter
     window.location.href = `editcustomer.html?id=${uuid}`;
 }
-
-
-
 
 function deleteCustomer(uuid) {
     const token = localStorage.getItem('jwtToken');
@@ -227,8 +243,6 @@ document.getElementById('searchButton').addEventListener('click', function() {
 });
 
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const rowsPerPage = 5;
     let currentPage = 1;
@@ -320,3 +334,5 @@ document.getElementById('logoutButton').addEventListener('click', function() {
     localStorage.removeItem('jwtToken');
     window.location.href = 'index.html';
 });
+
+
