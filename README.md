@@ -14,6 +14,33 @@
 The ClientSync is a web-based application designed to manage customer data efficiently. It allows users to add, view, update, delete, and search for customers. The application also supports synchronization of customer data from an external API. The project includes a frontend application developed with HTML, CSS, and JavaScript, and a backend API developed using Spring Boot and Java.
 
 ## UI Screenshots
+**Home Page**
+
+![Home Page](Images/Home_Page.png)
+
+**Login Page**
+
+![Login Page](Images/Login_Page.png)
+
+**Sign Up Page**
+
+![Sign Up Page](Images/Sign_Up_Page.png)
+
+**All Customers**
+
+![All Customers](Images/All_Customers.png)
+
+**Add a New Customer**
+
+![Add A Customer](Images/Add_New_Customer.png)
+
+**Edit Customer Details**
+
+![Edit Customer](Images/Edit_Customer_Details.png)
+
+**Database Schema**
+![Database Schema](Images/database.png)
+
 
 ## Features
 - Add new customers
