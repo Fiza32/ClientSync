@@ -39,6 +39,7 @@ The ClientSync is a web-based application designed to manage customer data effic
 ![Edit Customer](Images/Edit_Customer_Details.png)
 
 **Database Schema**
+
 ![Database Schema](Images/database.png)
 
 
@@ -124,7 +125,7 @@ The ClientSync is a web-based application designed to manage customer data effic
     ```
 
 ## Demo Video
-- **Google Drive Link:** 
+- **Google Drive Link:** https://drive.google.com/file/d/12a3NDKvhzanb2SU2BFi-vXXy0RVvxL0a/view?usp=sharing
 
 ## API Endpoints
 - **Register a new User**
